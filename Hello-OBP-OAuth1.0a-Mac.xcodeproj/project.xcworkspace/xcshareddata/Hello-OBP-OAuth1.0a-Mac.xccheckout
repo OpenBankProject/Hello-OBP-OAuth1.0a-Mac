@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C85722F-A9AF-49CE-B640-3D1F51869BAA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hello-OBP-OAuth1.0a-Mac</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ED491149-DFE0-4A6A-AE30-43F6D0A82D74</key>
+		<string>https://github.com/OpenBankProject/Hello-OBP-OAuth1.0a-Mac.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hello-OBP-OAuth1.0a-Mac.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ED491149-DFE0-4A6A-AE30-43F6D0A82D74</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/OpenBankProject/Hello-OBP-OAuth1.0a-Mac.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ED491149-DFE0-4A6A-AE30-43F6D0A82D74</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ED491149-DFE0-4A6A-AE30-43F6D0A82D74</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Hello-OBP-OAuth1.0a-Mac</string>
+		</dict>
+	</array>
+</dict>
+</plist>
