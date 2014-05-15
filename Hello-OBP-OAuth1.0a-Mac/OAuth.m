@@ -20,6 +20,7 @@
 #import "OAuth.h"
 #import "OAuthCore.h"
 #import "STHTTPRequest.h"
+#import "AppDelegate.h"
 
 // 1. To get the values for the following fields, please register your client here:
 // https://apisandbox.openbankproject.com/consumer-registration
@@ -42,7 +43,7 @@
 #pragma mark - Get Tokens
 
 - (void)getRequestToken {
-    
+    NSLog(@"Hello getRequestToken");
     NSString *lURL = [OAUTH_AUTHENTICATE_URL stringByAppendingString: @"oauth/initiate"];
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
     
@@ -111,7 +112,7 @@
     [request setPOSTDictionary:[NSMutableDictionary dictionary]];  //set method to POST
     NSString *header = OAuthorizationHeaderWithCallback([request url],
                                                         [request POSTDictionary]!=nil?@"POST":@"GET",
-                                                        [@"" dataUsingEncoding:NSUTF8StringEncoding], //should be httpbody
+                                                        [@"" dataUsingEncoding:NSUTF8StringEncoding],
                                                         OAUTH_CONSUMER_KEY,
                                                         OAUTH_CONSUMER_SECRET_KEY,
                                                         requestToken,
@@ -127,11 +128,6 @@
             accessToken = [response valueForKey:@"oauth_token"];
             accessTokenSecret = [response valueForKey:@"oauth_token_secret"];
             
-            //store into user defaults for later access
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:accessToken forKey:kAccessTokenKeyForPreferences];
-            [defaults setObject:accessTokenSecret forKey:kAccessSecretKeyForPreferences];
-            [defaults synchronize];
             [self getResourceWithString];
         }
     };
@@ -147,7 +143,7 @@
 #pragma mark - Get Resources
 
 - (void)getResourceWithString {
-    
+    // 
     NSString *lURL = [NSString stringWithFormat: @"%@banks/%@/accounts/private",OAUTH_BASE_URL, OAUTH_CONSUMER_BANK_ID];
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
     NSString *header = OAuthorizationHeader([request url],
@@ -162,7 +158,19 @@
     [request setHeaderWithName:@"Authorization" value:header];
     request.completionBlock = ^(NSDictionary *headers, NSInteger status, NSString *body) {
         if (status == 200) {
-            NSLog(@"body = %@",body); // The OBP API returns JSON
+            //NSLog(@"body = %@",body); // The OBP API returns JSON
+            //store into user defaults for later access
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:accessToken forKey:kAccessTokenKeyForPreferences];
+            [defaults setObject:accessTokenSecret forKey:kAccessSecretKeyForPreferences];
+            [defaults setObject:body forKey:kJSON];
+            [defaults synchronize];
+            // Show the ViewData
+            AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
+            [appDelegate.textJSON setString:[defaults valueForKey:kJSON]];
+            [appDelegate.viewConnect setHidden:YES];
+            [appDelegate.viewData setHidden:NO];
+            
         }
     };
     

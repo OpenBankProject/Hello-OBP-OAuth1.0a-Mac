@@ -21,7 +21,9 @@
 		74511AC8190A5F8400A78522 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74511AC0190A5F8400A78522 /* README.md */; };
 		74511AC9190A5F8400A78522 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74511AC2190A5F8400A78522 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
 		74511ACC190A611500A78522 /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 74511ACB190A611500A78522 /* OAuth.m */; };
-		74511AD1190A93F200A78522 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74511A94190A5D2900A78522 /* MainMenu.xib */; };
+		74B537DF1924C79F00C38121 /* logo-obp only text.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 74B537DE1924C79F00C38121 /* logo-obp only text.jpeg */; };
+		74B537E41925022100C38121 /* hello-obp-connect-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74B537E31925022100C38121 /* hello-obp-connect-logo.icns */; };
+		74B537E71925041400C38121 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74511A94190A5D2900A78522 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		74511AC2190A5F8400A78522 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
 		74511ACA190A611500A78522 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
 		74511ACB190A611500A78522 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
+		74B537DE1924C79F00C38121 /* logo-obp only text.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-obp only text.jpeg"; sourceTree = "<group>"; };
+		74B537E31925022100C38121 /* hello-obp-connect-logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "hello-obp-connect-logo.icns"; path = "Images.xcassets/hello-obp-connect-logo.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 		74511A86190A5D2900A78522 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				74B537E31925022100C38121 /* hello-obp-connect-logo.icns */,
+				74B537DE1924C79F00C38121 /* logo-obp only text.jpeg */,
 				74511AB6190A5F8400A78522 /* logo-obp.JPG */,
 				74511AB7190A5F8400A78522 /* OAuthCore */,
 				74511ABF190A5F8400A78522 /* STHTTPRequest */,
@@ -207,12 +213,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74511AD1190A93F200A78522 /* MainMenu.xib in Resources */,
+				74B537E71925041400C38121 /* MainMenu.xib in Resources */,
+				74B537DF1924C79F00C38121 /* logo-obp only text.jpeg in Resources */,
 				74511AC4190A5F8400A78522 /* LICENSE in Resources */,
 				74511A8A190A5D2900A78522 /* InfoPlist.strings in Resources */,
 				74511A98190A5D2900A78522 /* Images.xcassets in Resources */,
 				74511AC8190A5F8400A78522 /* README.md in Resources */,
 				74511A90190A5D2900A78522 /* Credits.rtf in Resources */,
+				74B537E41925022100C38121 /* hello-obp-connect-logo.icns in Resources */,
 				74511AC3190A5F8400A78522 /* logo-obp.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +345,6 @@
 		74511AAE190A5D2900A78522 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
@@ -350,7 +357,6 @@
 		74511AAF190A5D2900A78522 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";

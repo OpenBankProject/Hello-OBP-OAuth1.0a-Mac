@@ -10,6 +10,7 @@
 
 #define kAccessTokenKeyForPreferences @"accessToken"
 #define kAccessSecretKeyForPreferences @"accessTokenSecret"
+#define kJSON @"textJSON"
 
 @interface OAuth : NSObject {
    

@@ -15,13 +15,22 @@
 
 
 @property (assign) IBOutlet NSWindow *window;
+
 @property (nonatomic, retain) OAuth *oauth;
 
-@property (assign) IBOutlet NSButton *ConnectionOBP;
-@property (assign) IBOutlet NSTextField *message;
 
--(IBAction)connect:(id)sender;
+@property (strong, nonatomic) IBOutlet NSView *viewConnect;
+@property (strong, nonatomic) IBOutlet NSButton *linkOBP;
+@property (strong, nonatomic) IBOutlet NSButton *ConnectionOBP;
 
+@property (strong, nonatomic) IBOutlet NSView *viewData;
+@property (strong, nonatomic) IBOutlet NSButton *logOut;
+@property (strong, nonatomic) IBOutlet NSTextView *textJSON;
 
+- (IBAction)connect:(id)sender;
+
+- (IBAction)connectToGitHub:(id)sender;
+
+- (IBAction)logOut:(id)sender;
 
 @end
