@@ -21,6 +21,7 @@
 #import "OAuthCore.h"
 #import "STHTTPRequest.h"
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 // 1. To get the values for the following fields, please register your client here:
 // https://apisandbox.openbankproject.com/consumer-registration
@@ -43,7 +44,7 @@
 #pragma mark - Get Tokens
 
 - (void)getRequestToken {
-    NSLog(@"Hello getRequestToken");
+    
     NSString *lURL = [OAUTH_AUTHENTICATE_URL stringByAppendingString: @"oauth/initiate"];
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
     
@@ -78,7 +79,7 @@
     [request startAsynchronous];
 }
 
-#pragma mark -
+#pragma mark - Open Browser
 
 
 - (void)openBrowserAuthRequest {
@@ -165,12 +166,6 @@
             [defaults setObject:accessTokenSecret forKey:kAccessSecretKeyForPreferences];
             [defaults setObject:body forKey:kJSON];
             [defaults synchronize];
-            // Show the ViewData
-            AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
-            [appDelegate.textJSON setString:[defaults valueForKey:kJSON]];
-            [appDelegate.viewConnect setHidden:YES];
-            [appDelegate.viewData setHidden:NO];
-            
         }
     };
     

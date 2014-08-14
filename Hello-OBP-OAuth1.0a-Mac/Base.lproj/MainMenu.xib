@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
@@ -13,12 +13,6 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="ConnectionOBP" destination="BA2-tN-yvl" id="DZK-mE-Fjr"/>
-                <outlet property="linkOBP" destination="Fdd-eQ-88A" id="t5z-Py-7nU"/>
-                <outlet property="logOut" destination="VMf-v8-WNx" id="kHY-pk-yWN"/>
-                <outlet property="textJSON" destination="oCa-Vq-q7l" id="a8w-hr-grj"/>
-                <outlet property="viewConnect" destination="FeG-0Z-EaS" id="6Jz-xV-5fb"/>
-                <outlet property="viewData" destination="fvo-oL-5P4" id="FnH-1l-kHa"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="LGa-0d-bL7"/>
             </connections>
         </customObject>
@@ -680,118 +674,7 @@
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <customView id="FeG-0Z-EaS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" id="Fdd-eQ-88A">
-                                <rect key="frame" x="106" y="87" width="267" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Hello-OBP-OAuth1.0a-IOS Read me" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zwe-7C-Lc1">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="connectToGitHub:" target="Voe-Tx-rLC" id="v4I-HJ-8uK"/>
-                                </connections>
-                            </button>
-                            <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="p68-PG-v6Z">
-                                <rect key="frame" x="33" y="126" width="416" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="justified" id="Wk2-Y4-b7S">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">This is an example application of how to use the OBP API to connect to bank data. 
-
-You are not logged in so there is no data. You must log into Open Bank Project with a connected account to see your bank data. Example account can be found here:</string>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView id="BUc-8j-atU">
-                                <rect key="frame" x="142" y="240" width="195" height="112"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo-obp" id="MZg-TD-hcF"/>
-                            </imageView>
-                            <button verticalHuggingPriority="750" id="BA2-tN-yvl">
-                                <rect key="frame" x="114" y="36" width="251" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" title="Connect to OBP" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="15f-mw-tdk">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="25" name="Helvetica-Light"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="connect:" target="Voe-Tx-rLC" id="voB-98-05N"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </customView>
-                    <customView id="fvo-oL-5P4">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="yLR-CR-SEi">
-                                <rect key="frame" x="138" y="277" width="205" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="You are autheticated" id="XBp-4f-5io">
-                                    <font key="font" metaFont="system" size="17"/>
-                                    <color key="textColor" red="0.0" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <imageView id="DfT-OM-eZ2">
-                                <rect key="frame" x="128" y="310" width="225" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo-obp only text" id="WHG-qE-Mv1"/>
-                            </imageView>
-                            <button verticalHuggingPriority="750" id="VMf-v8-WNx">
-                                <rect key="frame" x="369" y="268" width="88" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Log out" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oSx-ed-qtO">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="logOut:" target="Voe-Tx-rLC" id="lPf-Ii-Gl5"/>
-                                </connections>
-                            </button>
-                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="RF8-nF-TkW">
-                                <rect key="frame" x="32" y="35" width="417" height="213"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <clipView key="contentView" id="aTP-P5-pOg">
-                                    <rect key="frame" x="1" y="1" width="415" height="211"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <textView editable="NO" importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="oCa-Vq-q7l">
-                                            <rect key="frame" x="0.0" y="0.0" width="415" height="211"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="415" height="211"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
-                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="415" height="211"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
-                                        </textView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="xCW-3Y-Mfv">
-                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="QvZ-we-1zR">
-                                    <rect key="frame" x="400" y="1" width="16" height="211"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
-                        </subviews>
-                    </customView>
-                </subviews>
             </view>
         </window>
     </objects>
-    <resources>
-        <image name="logo-obp" width="246.75" height="153.75"/>
-        <image name="logo-obp only text" width="224.25" height="29.25"/>
-    </resources>
 </document>
