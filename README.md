@@ -29,11 +29,11 @@ You can also setup your own instance of the API and point this app to your insta
 
 Login page
 
-<img src="./images/hello-obp-login.png" />
+<img src="https://raw.githubusercontent.com/OpenBankProject/Hello-OBP-OAuth1.0a-Mac/master/Images/hello-obp-login.png" />
 
 Accounts page
 
-<img src="./images/hello-obp-loged-in-and-logout.png" />
+<img src="https://github.com/OpenBankProject/Hello-OBP-OAuth1.0a-Mac/blob/master/Images/hello-obp-loged-in-and-logout.png" />
 
 ## Setup of API on own server
 
