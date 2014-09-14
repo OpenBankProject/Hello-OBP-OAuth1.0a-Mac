@@ -27,7 +27,13 @@ You can also setup your own instance of the API and point this app to your insta
 
 ## Screenshots
 
-Coming soon…
+Login page
+
+<img src=“./images/hello-obp-login.png" />
+
+Accounts page
+
+<img src=“./images/hello-obp-loged-in-and-logout.png" />
 
 ## Setup of API on own server
 
