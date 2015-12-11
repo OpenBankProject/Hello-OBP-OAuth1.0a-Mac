@@ -61,8 +61,11 @@
 								   [OAUTH_URL_SCHEME stringByAppendingString: @"://callback"]);
     
     [request setHeaderWithName:@"Authorization" value:header];
-    
-    request.completionBlock = ^(NSDictionary *headers, NSInteger status, NSString *body) {
+
+	STHTTPRequest __weak *request_ifStillAround = request;
+    request.completionBlock = ^(NSDictionary *headers, NSString *body) {
+		STHTTPRequest *request = request_ifStillAround;
+		NSInteger status = request.responseStatus;
         if (status == 200) {
            
             NSDictionary *response = [self parseQueryString:[body stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -73,8 +76,8 @@
             }
         }
     };
-    request.errorBlock = ^(NSError *error, NSInteger status) {
-        NSLog(@"status = %ld and Error= %@", (long)status, error);
+    request.errorBlock = ^(NSError *error) {
+        NSLog(@"getRequestToken got error %@", error);
     };
     
     [request startAsynchronous];
@@ -125,7 +128,10 @@
         
     [request setHeaderWithName:@"Authorization" value:header];
     
-    request.completionBlock = ^(NSDictionary *headers, NSInteger status, NSString *body) {
+	STHTTPRequest __weak *request_ifStillAround = request;
+    request.completionBlock = ^(NSDictionary *headers, NSString *body) {
+		STHTTPRequest *request = request_ifStillAround;
+		NSInteger status = request.responseStatus;
         if (status == 200) {
             NSDictionary *response = [self parseQueryString:[body stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             accessToken = [response valueForKey:@"oauth_token"];
@@ -135,8 +141,8 @@
         }
     };
     
-    request.errorBlock = ^(NSError *error, NSInteger status) {
-        NSLog(@"status = %ld and Error= %@", (long)status, error);
+    request.errorBlock = ^(NSError *error) {
+        NSLog(@"getAccessToken got error %@", error);
     };
 
     
@@ -161,7 +167,11 @@
 								   nil); // callback
     
     [request setHeaderWithName:@"Authorization" value:header];
-    request.completionBlock = ^(NSDictionary *headers, NSInteger status, NSString *body) {
+
+	STHTTPRequest __weak *request_ifStillAround = request;
+    request.completionBlock = ^(NSDictionary *headers, NSString *body) {
+		STHTTPRequest *request = request_ifStillAround;
+		NSInteger status = request.responseStatus;
         if (status == 200) {
             //NSLog(@"body = %@",body); // The OBP API returns JSON
             //store into user defaults for later access
@@ -173,8 +183,8 @@
         }
     };
     
-    request.errorBlock = ^(NSError *error, NSInteger status) {
-        NSLog(@"Status = %ld: Error= %@", (long)status, error);
+    request.errorBlock = ^(NSError *error) {
+        NSLog(@"getResourceWithString got error %@", error);
     };
     
     [request startAsynchronous];

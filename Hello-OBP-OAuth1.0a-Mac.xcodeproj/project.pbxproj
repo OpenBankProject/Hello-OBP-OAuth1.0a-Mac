@@ -23,7 +23,7 @@
 		74B5381C19251A4000C38121 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381319251A4000C38121 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		74B5381D19251A4000C38121 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381519251A4000C38121 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
 		74B5381E19251A4000C38121 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74B5381719251A4000C38121 /* README.md */; };
-		74B5381F19251A4000C38121 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381919251A4000C38121 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
+		74B5381F19251A4000C38121 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381919251A4000C38121 /* STHTTPRequest.m */; };
 		74B5382E19251B7200C38121 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5382C19251B7200C38121 /* AppDelegate.m */; };
 		74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */; };
 /* End PBXBuildFile section */
