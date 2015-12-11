@@ -49,15 +49,16 @@
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
     
     [request setPOSTDictionary:[NSMutableDictionary dictionary]];  //set method to POST
-    NSString *header = OAuthorizationHeaderWithCallback([request url],
-                                                        [request POSTDictionary]!=nil?@"POST":@"GET",
-                                                        [@"" dataUsingEncoding:NSUTF8StringEncoding],
-                                                        OAUTH_CONSUMER_KEY,
-                                                        OAUTH_CONSUMER_SECRET_KEY,
-                                                        nil,
-                                                        nil,
-                                                        nil,
-                                                        [OAUTH_URL_SCHEME stringByAppendingString: @"://callback"]);
+	NSString *header = OAuthHeader([request url],
+								   [request POSTDictionary]!=nil?@"POST":@"GET",
+								   [@"" dataUsingEncoding:NSUTF8StringEncoding],
+								   OAUTH_CONSUMER_KEY,
+								   OAUTH_CONSUMER_SECRET_KEY,
+								   nil,
+								   nil,
+								   nil, // oauth_verifier
+								   OAuthCoreSignatureMethod_HMAC_SHA256,
+								   [OAUTH_URL_SCHEME stringByAppendingString: @"://callback"]);
     
     [request setHeaderWithName:@"Authorization" value:header];
     
@@ -111,15 +112,16 @@
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
     
     [request setPOSTDictionary:[NSMutableDictionary dictionary]];  //set method to POST
-    NSString *header = OAuthorizationHeaderWithCallback([request url],
-                                                        [request POSTDictionary]!=nil?@"POST":@"GET",
-                                                        [@"" dataUsingEncoding:NSUTF8StringEncoding],
-                                                        OAUTH_CONSUMER_KEY,
-                                                        OAUTH_CONSUMER_SECRET_KEY,
-                                                        requestToken,
-                                                        requestTokenSecret,
-                                                        verifier,
-                                                        [OAUTH_URL_SCHEME stringByAppendingString: @"://callback"]);
+	NSString *header = OAuthHeader([request url],
+								   [request POSTDictionary]!=nil?@"POST":@"GET",
+								   [@"" dataUsingEncoding:NSUTF8StringEncoding],
+								   OAUTH_CONSUMER_KEY,
+								   OAUTH_CONSUMER_SECRET_KEY,
+								   requestToken,
+								   requestTokenSecret,
+								   verifier,
+								   OAuthCoreSignatureMethod_HMAC_SHA256,
+								   [OAUTH_URL_SCHEME stringByAppendingString: @"://callback"]);
         
     [request setHeaderWithName:@"Authorization" value:header];
     
@@ -147,14 +149,16 @@
     // 
     NSString *lURL = [NSString stringWithFormat: @"%@banks/%@/accounts/private",OAUTH_BASE_URL, OAUTH_CONSUMER_BANK_ID];
     STHTTPRequest *request = [STHTTPRequest requestWithURLString:lURL];
-    NSString *header = OAuthorizationHeader([request url],
-                                            [request POSTDictionary]!=nil?@"POST":@"GET",
-                                            [@"" dataUsingEncoding:NSUTF8StringEncoding],
-                                            OAUTH_CONSUMER_KEY,
-                                            OAUTH_CONSUMER_SECRET_KEY,
-                                            accessToken,
-                                            accessTokenSecret,
-                                            nil);
+	NSString *header = OAuthHeader([request url],
+								   [request POSTDictionary]!=nil?@"POST":@"GET",
+								   [@"" dataUsingEncoding:NSUTF8StringEncoding],
+								   OAUTH_CONSUMER_KEY,
+								   OAUTH_CONSUMER_SECRET_KEY,
+								   accessToken,
+								   accessTokenSecret,
+								   nil, // oauth_verifier
+								   OAuthCoreSignatureMethod_HMAC_SHA256,
+								   nil); // callback
     
     [request setHeaderWithName:@"Authorization" value:header];
     request.completionBlock = ^(NSDictionary *headers, NSInteger status, NSString *body) {
