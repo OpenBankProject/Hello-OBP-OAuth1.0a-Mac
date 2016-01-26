@@ -79,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				74511A85190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */,
+				AEC08DC51C574D96002E2AA7 /* OBPKit */,
 				74511A7E190A5D2900A78522 /* Frameworks */,
 				74511A7D190A5D2900A78522 /* Products */,
 			);
@@ -114,35 +115,11 @@
 		74511A85190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */ = {
 			isa = PBXGroup;
 			children = (
-				74B5382D19251B7200C38121 /* AppDelegate.h */,
-				74B5382C19251B7200C38121 /* AppDelegate.m */,
-				74511ACA190A611500A78522 /* OAuth.h */,
-				74B538041925190B00C38121 /* OAuth.m */,
-				7479DFBB199BCF5200CA3282 /* MainViewController.h */,
-				7479DFBC199BCF5200CA3282 /* MainViewController.m */,
-				7479DFBD199BCF5200CA3282 /* MainViewController.xib */,
-				74B538091925195E00C38121 /* MainMenu.xib */,
-				74511A97190A5D2900A78522 /* Images.xcassets */,
-				74511A86190A5D2900A78522 /* Supporting Files */,
+				AEC08DBF1C574D6B002E2AA7 /* Main */,
+				AEC08DC11C574D74002E2AA7 /* UI */,
+				AEC08DC31C574D7C002E2AA7 /* Res */,
 			);
 			path = "Hello-OBP-OAuth1.0a-Mac";
-			sourceTree = "<group>";
-		};
-		74511A86190A5D2900A78522 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */,
-				74B5380E19251A4000C38121 /* OAuthCore */,
-				74B5381619251A4000C38121 /* STHTTPRequest */,
-				74B5380C192519C000C38121 /* logo-obp only text.jpeg */,
-				74511AB6190A5F8400A78522 /* logo-obp.JPG */,
-				74511A87190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Info.plist */,
-				74511A88190A5D2900A78522 /* InfoPlist.strings */,
-				74511A8B190A5D2900A78522 /* main.m */,
-				74511A8D190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Prefix.pch */,
-				74511A8E190A5D2900A78522 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		74B5380E19251A4000C38121 /* OAuthCore */ = {
@@ -167,6 +144,77 @@
 				74B5381919251A4000C38121 /* STHTTPRequest.m */,
 			);
 			path = STHTTPRequest;
+			sourceTree = "<group>";
+		};
+		AEC08DBF1C574D6B002E2AA7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				74511A87190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Info.plist */,
+				74511A8D190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Prefix.pch */,
+				74511A8B190A5D2900A78522 /* main.m */,
+				74B5382D19251B7200C38121 /* AppDelegate.h */,
+				74B5382C19251B7200C38121 /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AEC08DC11C574D74002E2AA7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7479DFBB199BCF5200CA3282 /* MainViewController.h */,
+				7479DFBC199BCF5200CA3282 /* MainViewController.m */,
+				74511ACA190A611500A78522 /* OAuth.h */,
+				74B538041925190B00C38121 /* OAuth.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AEC08DC31C574D7C002E2AA7 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				74511A8E190A5D2900A78522 /* Credits.rtf */,
+				74511A88190A5D2900A78522 /* InfoPlist.strings */,
+				74511A97190A5D2900A78522 /* Images.xcassets */,
+				74B538091925195E00C38121 /* MainMenu.xib */,
+				7479DFBD199BCF5200CA3282 /* MainViewController.xib */,
+				74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */,
+				74B5380C192519C000C38121 /* logo-obp only text.jpeg */,
+				74511AB6190A5F8400A78522 /* logo-obp.JPG */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		AEC08DC51C574D96002E2AA7 /* OBPKit */ = {
+			isa = PBXGroup;
+			children = (
+				AEC08DC61C574D96002E2AA7 /* Connection */,
+				AEC08DCD1C574D96002E2AA7 /* Util */,
+				AEC08DC81C574D96002E2AA7 /* External */,
+			);
+			path = OBPKit;
+			sourceTree = "<group>";
+		};
+		AEC08DC61C574D96002E2AA7 /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
+		AEC08DC81C574D96002E2AA7 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				74B5380E19251A4000C38121 /* OAuthCore */,
+				74B5381619251A4000C38121 /* STHTTPRequest */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		AEC08DCD1C574D96002E2AA7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,8 +405,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
-				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Info.plist";
+				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
+				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,8 +417,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
-				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Hello-OBP-OAuth1.0a-Mac-Info.plist";
+				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
+				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
