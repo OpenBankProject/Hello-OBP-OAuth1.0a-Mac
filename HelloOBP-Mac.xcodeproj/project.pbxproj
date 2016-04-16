@@ -23,6 +23,7 @@
 		AEA6FE5B1C917E02005C3A8B /* OBPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FE4D1C917D94005C3A8B /* OBPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEA6FE5D1C917E02005C3A8B /* STHTTPRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FE4F1C917D94005C3A8B /* STHTTPRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEA6FE5F1C917E02005C3A8B /* UICKeyChainStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FD791C917D11005C3A8B /* UICKeyChainStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEB147ED1CC2B6C500B4A099 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = AEB147E91CC2A02B00B4A099 /* LICENSE.txt */; };
 		AED693C21C5F852900C7FB07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED693C11C5F852900C7FB07 /* Security.framework */; };
 /* End PBXBuildFile section */
 
@@ -304,6 +305,7 @@
 				7479DFBA199BBA2700CA3282 /* MainMenu.xib in Resources */,
 				74B5380D192519C000C38121 /* logo-obp only text.jpeg in Resources */,
 				74511A8A190A5D2900A78522 /* InfoPlist.strings in Resources */,
+				AEB147ED1CC2B6C500B4A099 /* LICENSE.txt in Resources */,
 				74511A98190A5D2900A78522 /* Images.xcassets in Resources */,
 				74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */,
 				74511A90190A5D2900A78522 /* Credits.rtf in Resources */,

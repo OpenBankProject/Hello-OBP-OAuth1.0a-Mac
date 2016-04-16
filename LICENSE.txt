@@ -1,6 +1,6 @@
 Open Bank Project
 
-Copyright 2011,2012 TESOBE / Music Pictures Ltd.
+Copyright 2011-2016 TESOBE / Music Pictures Ltd.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 Open Bank Project (http://www.openbankproject.com)
-Copyright 2011,2012 TESOBE / Music Pictures Ltd
+Copyright 2011-2016 TESOBE / Music Pictures Ltd
 
 This product includes software developed at
 TESOBE (http://www.tesobe.com/)
