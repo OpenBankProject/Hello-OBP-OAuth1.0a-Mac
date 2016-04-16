@@ -20,7 +20,29 @@
 		74B5380D192519C000C38121 /* logo-obp only text.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 74B5380C192519C000C38121 /* logo-obp only text.jpeg */; };
 		74B5382E19251B7200C38121 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5382C19251B7200C38121 /* AppDelegate.m */; };
 		74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */; };
+		AEA6FE591C917E02005C3A8B /* OAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FE4B1C917D94005C3A8B /* OAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA6FE5B1C917E02005C3A8B /* OBPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FE4D1C917D94005C3A8B /* OBPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA6FE5D1C917E02005C3A8B /* STHTTPRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FE4F1C917D94005C3A8B /* STHTTPRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEA6FE5F1C917E02005C3A8B /* UICKeyChainStore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEA6FD791C917D11005C3A8B /* UICKeyChainStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AED693C21C5F852900C7FB07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED693C11C5F852900C7FB07 /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AEA6FE601C917E02005C3A8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AEA6FE5F1C917E02005C3A8B /* UICKeyChainStore.framework in Embed Frameworks */,
+				AEA6FE5D1C917E02005C3A8B /* STHTTPRequest.framework in Embed Frameworks */,
+				AEA6FE591C917E02005C3A8B /* OAuthCore.framework in Embed Frameworks */,
+				AEA6FE5B1C917E02005C3A8B /* OBPKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		74511A7C190A5D2900A78522 /* HelloOBP-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloOBP-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +67,26 @@
 		74B5382C19251B7200C38121 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		74B5382D19251B7200C38121 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "hello-obp-connect-logo.icns"; sourceTree = "<group>"; };
+		AEA6FD791C917D11005C3A8B /* UICKeyChainStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UICKeyChainStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA6FE4B1C917D94005C3A8B /* OAuthCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA6FE4D1C917D94005C3A8B /* OBPKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OBPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA6FE4F1C917D94005C3A8B /* STHTTPRequest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = STHTTPRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB147DC1CC29E2A00B4A099 /* copy-carthage-built-frameworks-to-built-products.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "copy-carthage-built-frameworks-to-built-products.sh"; sourceTree = "<group>"; };
+		AEB147DD1CC29E2A00B4A099 /* create-dynamic-xcconfigs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "create-dynamic-xcconfigs.sh"; sourceTree = "<group>"; };
+		AEB147DE1CC29E2A00B4A099 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AEB147DF1CC29E2A00B4A099 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AEB147E11CC29E4C00B4A099 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		AEB147E21CC29E4C00B4A099 /* Debug(carthage).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug(carthage).xcconfig"; sourceTree = "<group>"; };
+		AEB147E31CC29E4C00B4A099 /* Debug(cocoapods).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug(cocoapods).xcconfig"; sourceTree = "<group>"; };
+		AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug(dynamic).xcconfig"; sourceTree = "<group>"; };
+		AEB147E51CC29E4C00B4A099 /* Release(carthage).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release(carthage).xcconfig"; sourceTree = "<group>"; };
+		AEB147E61CC29E4C00B4A099 /* Release(cocoapods).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release(cocoapods).xcconfig"; sourceTree = "<group>"; };
+		AEB147E71CC29E4C00B4A099 /* Release(dynamic).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release(dynamic).xcconfig"; sourceTree = "<group>"; };
+		AEB147E81CC2A02B00B4A099 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		AEB147E91CC2A02B00B4A099 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		AEB147EA1CC2A02B00B4A099 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		AEB147EC1CC2B06F00B4A099 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AED693C11C5F852900C7FB07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74511A80190A5D2900A78522 /* Cocoa.framework in Frameworks */,
+				AED693C21C5F852900C7FB07 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				74511A85190A5D2900A78522 /* HelloOBP-Mac */,
+				AEB147E01CC29E4C00B4A099 /* Config */,
+				AEB96F3D1CB510CE00E19A81 /* Scripts */,
+				AEB147EB1CC2A03800B4A099 /* Supporting */,
 				74511A7E190A5D2900A78522 /* Frameworks */,
 				74511A7D190A5D2900A78522 /* Products */,
 			);
@@ -79,7 +125,12 @@
 		74511A7E190A5D2900A78522 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEA6FE4B1C917D94005C3A8B /* OAuthCore.framework */,
+				AEA6FE4D1C917D94005C3A8B /* OBPKit.framework */,
+				AEA6FE4F1C917D94005C3A8B /* STHTTPRequest.framework */,
+				AEA6FD791C917D11005C3A8B /* UICKeyChainStore.framework */,
 				74511A7F190A5D2900A78522 /* Cocoa.framework */,
+				AED693C11C5F852900C7FB07 /* Security.framework */,
 				74511A81190A5D2900A78522 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -105,13 +156,48 @@
 			path = "HelloOBP-Mac";
 			sourceTree = "<group>";
 		};
+		AEB147DB1CC29E2A00B4A099 /* CCPScripts */ = {
 			isa = PBXGroup;
 			children = (
+				AEB147DC1CC29E2A00B4A099 /* copy-carthage-built-frameworks-to-built-products.sh */,
+				AEB147DD1CC29E2A00B4A099 /* create-dynamic-xcconfigs.sh */,
+				AEB147DE1CC29E2A00B4A099 /* LICENSE */,
+				AEB147DF1CC29E2A00B4A099 /* README.md */,
+			);
+			path = CCPScripts;
 			sourceTree = "<group>";
 		};
+		AEB147E01CC29E4C00B4A099 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */,
+				AEB147E71CC29E4C00B4A099 /* Release(dynamic).xcconfig */,
+				AEB147E11CC29E4C00B4A099 /* Common.xcconfig */,
+				AEB147E21CC29E4C00B4A099 /* Debug(carthage).xcconfig */,
+				AEB147E51CC29E4C00B4A099 /* Release(carthage).xcconfig */,
+				AEB147E31CC29E4C00B4A099 /* Debug(cocoapods).xcconfig */,
+				AEB147E61CC29E4C00B4A099 /* Release(cocoapods).xcconfig */,
 			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		AEB147EB1CC2A03800B4A099 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				AEB147EC1CC2B06F00B4A099 /* README.md */,
+				AEB147E91CC2A02B00B4A099 /* LICENSE.txt */,
+				AEB147E81CC2A02B00B4A099 /* Cartfile */,
+				AEB147EA1CC2A02B00B4A099 /* Podfile */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		AEB96F3D1CB510CE00E19A81 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				AEB147DB1CC29E2A00B4A099 /* CCPScripts */,
+			);
+			path = Scripts;
 			sourceTree = "<group>";
 		};
 		AEC08DBF1C574D6B002E2AA7 /* Main */ = {
@@ -159,8 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74511AAD190A5D2900A78522 /* Build configuration list for PBXNativeTarget "HelloOBP-Mac" */;
 			buildPhases = (
+				AEB96F2D1CB45CD400E19A81 /* Make Carthage Build Directory */,
+				AEBDF9EE1CA809BA00F3F3FF /* Copy Frameworks built by Carthage */,
 				74511A78190A5D2900A78522 /* Sources */,
 				74511A79190A5D2900A78522 /* Frameworks */,
+				AEA6FE601C917E02005C3A8B /* Embed Frameworks */,
 				74511A7A190A5D2900A78522 /* Resources */,
 			);
 			buildRules = (
@@ -218,6 +307,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEB96F2D1CB45CD400E19A81 /* Make Carthage Build Directory */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make Carthage Build Directory";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if ! [[ -e \"${CARTHAGE_BUILD_PLATFORM_DIR}\" ]] ; then\n    mkdir -p \"${CARTHAGE_BUILD_PLATFORM_DIR}\"\nfi";
+		};
+		AEBDF9EE1CA809BA00F3F3FF /* Copy Frameworks built by Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(CARTHAGE_BUILD_PLATFORM_DIR)/OAuthCore.framework",
+				"$(CARTHAGE_BUILD_PLATFORM_DIR)/OBPKit.framework",
+				"$(CARTHAGE_BUILD_PLATFORM_DIR)/STHTTPRequest.framework",
+				"$(CARTHAGE_BUILD_PLATFORM_DIR)/UICKeyChainStore.framework",
+			);
+			name = "Copy Frameworks built by Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "Scripts/CCPScripts/copy-carthage-built-frameworks-to-built-products.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		74511A78190A5D2900A78522 /* Sources */ = {
@@ -332,11 +456,14 @@
 		};
 		74511AAE190A5D2900A78522 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
 				INFOPLIST_FILE = "HelloOBP-Mac/Main/HelloOBP-Mac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tesobe.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -344,11 +471,14 @@
 		};
 		74511AAF190A5D2900A78522 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
 				INFOPLIST_FILE = "HelloOBP-Mac/Main/HelloOBP-Mac-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tesobe.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
