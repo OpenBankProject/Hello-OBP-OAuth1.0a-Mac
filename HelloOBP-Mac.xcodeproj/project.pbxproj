@@ -86,6 +86,7 @@
 		AEB147E91CC2A02B00B4A099 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		AEB147EA1CC2A02B00B4A099 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		AEB147EC1CC2B06F00B4A099 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AEBDF9EC1CA48CB700F3F3FF /* HelloOBP-Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "HelloOBP-Mac.entitlements"; path = "../HelloOBP-Mac.entitlements"; sourceTree = "<group>"; };
 		AED693C11C5F852900C7FB07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -229,6 +230,7 @@
 				74511A8E190A5D2900A78522 /* Credits.rtf */,
 				74511A88190A5D2900A78522 /* InfoPlist.strings */,
 				74511A97190A5D2900A78522 /* Images.xcassets */,
+				AEBDF9EC1CA48CB700F3F3FF /* HelloOBP-Mac.entitlements */,
 				74B538091925195E00C38121 /* MainMenu.xib */,
 				7479DFBD199BCF5200CA3282 /* MainViewController.xib */,
 				74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */,
@@ -267,8 +269,17 @@
 		74511A74190A5D2900A78522 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = TESOBE;
+				TargetAttributes = {
+					74511A7B190A5D2900A78522 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 74511A77190A5D2900A78522 /* Build configuration list for PBXProject "HelloOBP-Mac" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -458,6 +469,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HelloOBP-Mac/HelloOBP-Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
@@ -473,6 +486,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AEB147E41CC29E4C00B4A099 /* Debug(dynamic).xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HelloOBP-Mac/HelloOBP-Mac.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
