@@ -18,12 +18,6 @@
 		7479DFBF199BCF5200CA3282 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7479DFBD199BCF5200CA3282 /* MainViewController.xib */; };
 		74B538071925190B00C38121 /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B538041925190B00C38121 /* OAuth.m */; };
 		74B5380D192519C000C38121 /* logo-obp only text.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 74B5380C192519C000C38121 /* logo-obp only text.jpeg */; };
-		74B5381A19251A4000C38121 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 74B5380F19251A4000C38121 /* LICENSE */; };
-		74B5381B19251A4000C38121 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381119251A4000C38121 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74B5381C19251A4000C38121 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381319251A4000C38121 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		74B5381D19251A4000C38121 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381519251A4000C38121 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-checker"; }; };
-		74B5381E19251A4000C38121 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74B5381719251A4000C38121 /* README.md */; };
-		74B5381F19251A4000C38121 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5381919251A4000C38121 /* STHTTPRequest.m */; };
 		74B5382E19251B7200C38121 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5382C19251B7200C38121 /* AppDelegate.m */; };
 		74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */; };
 /* End PBXBuildFile section */
@@ -48,16 +42,6 @@
 		74B538041925190B00C38121 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
 		74B5380A1925195E00C38121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		74B5380C192519C000C38121 /* logo-obp only text.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-obp only text.jpeg"; sourceTree = "<group>"; };
-		74B5380F19251A4000C38121 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		74B5381019251A4000C38121 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		74B5381119251A4000C38121 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		74B5381219251A4000C38121 /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
-		74B5381319251A4000C38121 /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
-		74B5381419251A4000C38121 /* OAuthCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthCore.h; sourceTree = "<group>"; };
-		74B5381519251A4000C38121 /* OAuthCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthCore.m; sourceTree = "<group>"; };
-		74B5381719251A4000C38121 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		74B5381819251A4000C38121 /* STHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STHTTPRequest.h; sourceTree = "<group>"; };
-		74B5381919251A4000C38121 /* STHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STHTTPRequest.m; sourceTree = "<group>"; };
 		74B5382C19251B7200C38121 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		74B5382D19251B7200C38121 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "hello-obp-connect-logo.icns"; sourceTree = "<group>"; };
@@ -79,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				74511A85190A5D2900A78522 /* HelloOBP-Mac */,
-				AEC08DC51C574D96002E2AA7 /* OBPKit */,
 				74511A7E190A5D2900A78522 /* Frameworks */,
 				74511A7D190A5D2900A78522 /* Products */,
 			);
@@ -122,28 +105,13 @@
 			path = "HelloOBP-Mac";
 			sourceTree = "<group>";
 		};
-		74B5380E19251A4000C38121 /* OAuthCore */ = {
 			isa = PBXGroup;
 			children = (
-				74B5380F19251A4000C38121 /* LICENSE */,
-				74B5381019251A4000C38121 /* NSData+Base64.h */,
-				74B5381119251A4000C38121 /* NSData+Base64.m */,
-				74B5381219251A4000C38121 /* OAuth+Additions.h */,
-				74B5381319251A4000C38121 /* OAuth+Additions.m */,
-				74B5381419251A4000C38121 /* OAuthCore.h */,
-				74B5381519251A4000C38121 /* OAuthCore.m */,
-			);
-			path = OAuthCore;
 			sourceTree = "<group>";
 		};
-		74B5381619251A4000C38121 /* STHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				74B5381719251A4000C38121 /* README.md */,
-				74B5381819251A4000C38121 /* STHTTPRequest.h */,
-				74B5381919251A4000C38121 /* STHTTPRequest.m */,
 			);
-			path = STHTTPRequest;
 			sourceTree = "<group>";
 		};
 		AEC08DBF1C574D6B002E2AA7 /* Main */ = {
@@ -182,39 +150,6 @@
 				74511AB6190A5F8400A78522 /* logo-obp.JPG */,
 			);
 			path = Res;
-			sourceTree = "<group>";
-		};
-		AEC08DC51C574D96002E2AA7 /* OBPKit */ = {
-			isa = PBXGroup;
-			children = (
-				AEC08DC61C574D96002E2AA7 /* Connection */,
-				AEC08DCD1C574D96002E2AA7 /* Util */,
-				AEC08DC81C574D96002E2AA7 /* External */,
-			);
-			path = OBPKit;
-			sourceTree = "<group>";
-		};
-		AEC08DC61C574D96002E2AA7 /* Connection */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Connection;
-			sourceTree = "<group>";
-		};
-		AEC08DC81C574D96002E2AA7 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				74B5380E19251A4000C38121 /* OAuthCore */,
-				74B5381619251A4000C38121 /* STHTTPRequest */,
-			);
-			path = External;
-			sourceTree = "<group>";
-		};
-		AEC08DCD1C574D96002E2AA7 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74B5381D19251A4000C38121 /* OAuthCore.m in Sources */,
-				74B538071925190B00C38121 /* OAuth.m in Sources */,
-				74B5381F19251A4000C38121 /* STHTTPRequest.m in Sources */,
 				7479DFBE199BCF5200CA3282 /* MainViewController.m in Sources */,
-				74B5381B19251A4000C38121 /* NSData+Base64.m in Sources */,
-				74B5381C19251A4000C38121 /* OAuth+Additions.m in Sources */,
 				74511A8C190A5D2900A78522 /* main.m in Sources */,
 				74B5382E19251B7200C38121 /* AppDelegate.m in Sources */,
 			);
