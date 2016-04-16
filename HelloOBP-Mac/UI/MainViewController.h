@@ -20,7 +20,6 @@
 @property (strong, nonatomic) IBOutlet NSView *viewData;
 @property (strong, nonatomic) IBOutlet NSButton *logOut;
 
--(void) UpdateAccounts;
 
 - (IBAction)connect:(id)sender;
 

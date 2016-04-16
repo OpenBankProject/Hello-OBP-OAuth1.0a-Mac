@@ -16,7 +16,6 @@
 		7479DFBA199BBA2700CA3282 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74B538091925195E00C38121 /* MainMenu.xib */; };
 		7479DFBE199BCF5200CA3282 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479DFBC199BCF5200CA3282 /* MainViewController.m */; };
 		7479DFBF199BCF5200CA3282 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7479DFBD199BCF5200CA3282 /* MainViewController.xib */; };
-		74B538071925190B00C38121 /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B538041925190B00C38121 /* OAuth.m */; };
 		74B5380D192519C000C38121 /* logo-obp only text.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 74B5380C192519C000C38121 /* logo-obp only text.jpeg */; };
 		74B5382E19251B7200C38121 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74B5382C19251B7200C38121 /* AppDelegate.m */; };
 		74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 74B5382F19251D4800C38121 /* hello-obp-connect-logo.icns */; };
@@ -57,11 +56,9 @@
 		74511A8F190A5D2900A78522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		74511A97190A5D2900A78522 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74511AB6190A5F8400A78522 /* logo-obp.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-obp.JPG"; sourceTree = "<group>"; };
-		74511ACA190A611500A78522 /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
 		7479DFBB199BCF5200CA3282 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		7479DFBC199BCF5200CA3282 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7479DFBD199BCF5200CA3282 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		74B538041925190B00C38121 /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
 		74B5380A1925195E00C38121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		74B5380C192519C000C38121 /* logo-obp only text.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-obp only text.jpeg"; sourceTree = "<group>"; };
 		74B5382C19251B7200C38121 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +85,7 @@
 		AEB147EC1CC2B06F00B4A099 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AEBDF9EC1CA48CB700F3F3FF /* HelloOBP-Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "HelloOBP-Mac.entitlements"; path = "../HelloOBP-Mac.entitlements"; sourceTree = "<group>"; };
 		AED693C11C5F852900C7FB07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AED693D01C5F88F700C7FB07 /* DefaultServerDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultServerDetails.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +205,7 @@
 				74511A87190A5D2900A78522 /* HelloOBP-Mac-Info.plist */,
 				74511A8D190A5D2900A78522 /* HelloOBP-Mac-Prefix.pch */,
 				74511A8B190A5D2900A78522 /* main.m */,
+				AED693D01C5F88F700C7FB07 /* DefaultServerDetails.h */,
 				74B5382D19251B7200C38121 /* AppDelegate.h */,
 				74B5382C19251B7200C38121 /* AppDelegate.m */,
 			);
@@ -218,8 +217,6 @@
 			children = (
 				7479DFBB199BCF5200CA3282 /* MainViewController.h */,
 				7479DFBC199BCF5200CA3282 /* MainViewController.m */,
-				74511ACA190A611500A78522 /* OAuth.h */,
-				74B538041925190B00C38121 /* OAuth.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -308,12 +305,10 @@
 				74B5380D192519C000C38121 /* logo-obp only text.jpeg in Resources */,
 				74511A8A190A5D2900A78522 /* InfoPlist.strings in Resources */,
 				74511A98190A5D2900A78522 /* Images.xcassets in Resources */,
-				74B5381A19251A4000C38121 /* LICENSE in Resources */,
 				74B5383019251D4800C38121 /* hello-obp-connect-logo.icns in Resources */,
 				74511A90190A5D2900A78522 /* Credits.rtf in Resources */,
 				7479DFBF199BCF5200CA3282 /* MainViewController.xib in Resources */,
 				74511AC3190A5F8400A78522 /* logo-obp.JPG in Resources */,
-				74B5381E19251A4000C38121 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +407,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -423,6 +419,8 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -456,6 +454,8 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;

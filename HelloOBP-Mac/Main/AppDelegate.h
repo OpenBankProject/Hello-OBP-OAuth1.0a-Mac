@@ -7,17 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OAuth.h"
-
-@interface AppDelegate : NSObject <NSApplicationDelegate>{
-    OAuth *_oauth;
-}
 
 
+
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 @property (assign) IBOutlet NSWindow *window;
-
-@property (nonatomic, retain) OAuth *oauth;
-
-
-
 @end

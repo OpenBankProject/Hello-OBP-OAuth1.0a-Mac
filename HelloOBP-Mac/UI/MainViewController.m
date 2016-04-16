@@ -7,16 +7,25 @@
 //
 
 #import "MainViewController.h"
-#import "AppDelegate.h"
+// sdk
+#import <OBPKit/OBPKit.h>
+#import <STHTTPRequest/STHTTPRequest.h>
+// prj
+#import "DefaultServerDetails.h"
 
-@interface MainViewController () {
-    NSDictionary *accounts;
-    NSArray *account;
+
+
+@interface MainViewController ()
+{
+	OBPSession*		_session;
+    NSDictionary*	_accountsDict;
+    NSArray*		_accountsList;
 }
 @end
 
-@implementation MainViewController
 
+
+@implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,15 +36,21 @@
     return self;
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    //NSLog(@"awakeFromNib");
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    if (_session == nil)
+	{
+		OBPServerInfo*	serverInfo = [OBPServerInfo defaultEntry];
+		_session = [OBPSession sessionWithServerInfo: serverInfo];
+		// leave _session.webViewProvider as default
+	}
     
     //Check if already you are authenticated for OBP
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if([defaults valueForKey: kAccessTokenKeyForPreferences]){
+    if(_session.valid){
         [self.viewConnect setHidden:YES];
         [self.viewData setHidden:NO];
+		[self fetchAccounts];
     }
     else{
  
@@ -44,22 +59,30 @@
         //NSLog(@"Ups not connect");
     }
 }
+
 - (IBAction)connectToGitHub:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://github.com/OpenBankProject/Hello-OBP-OAuth1.0a-Mac/blob/master/README.md"]];
 }
 
+#pragma mark -
 
 -(IBAction)connect:(id)sender{
     
-    AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
-    [appDelegate.oauth getRequestToken];
+    [_session validate:
+		^(NSError * error) {
+			BOOL connected = error == nil && _session.valid;
+			if (connected)
+				[self fetchAccounts];
+            [self.viewConnect setHidden: connected];
+            [self.viewData setHidden: !connected];
+		}
+	];
 
-    
+
 }
 
 - (IBAction)logOut:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults valueForKey: kAccessTokenKeyForPreferences]) {
+    if ([_session valid]) {
         NSAlert *alert = [[NSAlert alloc] init];
         [alert addButtonWithTitle:@"OK"];
         [alert addButtonWithTitle:@"Cancel"];
@@ -71,26 +94,40 @@
         {
             return;
         }
-        [defaults removeObjectForKey: kAccessSecretKeyForPreferences];
-        [defaults removeObjectForKey: kAccessTokenKeyForPreferences];
-        [defaults synchronize];
+        [_session invalidate];
         [self.viewConnect setHidden:NO];
         [self.viewData setHidden:YES];
         
     }
 }
--(void) UpdateAccounts{
-    //NSLog(@"UpdateAccounts say Hi");
 
-    //Parse JSON to take the Accounts inside the array
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *json = [defaults valueForKey:kJSON];
-    NSData *data = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *error = nil;
-    accounts = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    account = [accounts objectForKey: @"accounts"];
-    [self.accountsTableView reloadData];
+#pragma mark -
+
+- (void)fetchAccounts {
+
+    NSString*		requestPath;
+
+	requestPath = [NSString stringWithFormat: @"banks/%@/accounts/private", OAUTH_CONSUMER_BANK_ID];
+
+	[_session.marshal getResourceAtAPIPath: requestPath
+							   withOptions: @{OBPMarshalOptionExpectClass : [NSDictionary class]}
+								forHandler:
+		^(id deserializedJSONObject, NSString* responseBody) {
+			_accountsDict = deserializedJSONObject;
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self loadAccounts];
+			});
+		}
+	];
 }
+
+- (void)loadAccounts
+{
+	_accountsList = _accountsDict[@"accounts"];
+	[self.accountsTableView reloadData];
+}
+
+#pragma mark -
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     // Get a new ViewCell
@@ -99,7 +136,7 @@
     // Since this is a single-column table view, this would not be necessary.
     if( [tableColumn.identifier isEqualToString:@"Accounts"] )
     {
-        NSString *idAccount= [[account objectAtIndex:row] objectForKey:@"id"];
+        NSString *idAccount= [[_accountsList objectAtIndex:row] objectForKey:@"id"];
         cellView.textField.stringValue = idAccount;
         return cellView;
     }
@@ -107,11 +144,13 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return account.count;
+    return _accountsList.count;
 }
 
+#pragma mark -
 
 - (IBAction)quitApp:(id)sender {
+	[_session invalidate];
     [[NSApplication sharedApplication] terminate:nil];
 }
 
