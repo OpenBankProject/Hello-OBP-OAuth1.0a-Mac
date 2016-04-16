@@ -29,15 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74511A7C190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hello-OBP-OAuth1.0a-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74511A7C190A5D2900A78522 /* HelloOBP-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloOBP-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74511A7F190A5D2900A78522 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		74511A82190A5D2900A78522 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		74511A83190A5D2900A78522 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		74511A84190A5D2900A78522 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		74511A87190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hello-OBP-OAuth1.0a-Mac-Info.plist"; sourceTree = "<group>"; };
+		74511A87190A5D2900A78522 /* HelloOBP-Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloOBP-Mac-Info.plist"; sourceTree = "<group>"; };
 		74511A89190A5D2900A78522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74511A8B190A5D2900A78522 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74511A8D190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hello-OBP-OAuth1.0a-Mac-Prefix.pch"; sourceTree = "<group>"; };
+		74511A8D190A5D2900A78522 /* HelloOBP-Mac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloOBP-Mac-Prefix.pch"; sourceTree = "<group>"; };
 		74511A8F190A5D2900A78522 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		74511A97190A5D2900A78522 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74511AB6190A5F8400A78522 /* logo-obp.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo-obp.JPG"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		74511A73190A5D2900A78522 = {
 			isa = PBXGroup;
 			children = (
-				74511A85190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */,
+				74511A85190A5D2900A78522 /* HelloOBP-Mac */,
 				AEC08DC51C574D96002E2AA7 /* OBPKit */,
 				74511A7E190A5D2900A78522 /* Frameworks */,
 				74511A7D190A5D2900A78522 /* Products */,
@@ -88,7 +88,7 @@
 		74511A7D190A5D2900A78522 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74511A7C190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac.app */,
+				74511A7C190A5D2900A78522 /* HelloOBP-Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,14 +112,14 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		74511A85190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */ = {
+		74511A85190A5D2900A78522 /* HelloOBP-Mac */ = {
 			isa = PBXGroup;
 			children = (
 				AEC08DBF1C574D6B002E2AA7 /* Main */,
 				AEC08DC11C574D74002E2AA7 /* UI */,
 				AEC08DC31C574D7C002E2AA7 /* Res */,
 			);
-			path = "Hello-OBP-OAuth1.0a-Mac";
+			path = "HelloOBP-Mac";
 			sourceTree = "<group>";
 		};
 		74B5380E19251A4000C38121 /* OAuthCore */ = {
@@ -149,8 +149,8 @@
 		AEC08DBF1C574D6B002E2AA7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				74511A87190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Info.plist */,
-				74511A8D190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac-Prefix.pch */,
+				74511A87190A5D2900A78522 /* HelloOBP-Mac-Info.plist */,
+				74511A8D190A5D2900A78522 /* HelloOBP-Mac-Prefix.pch */,
 				74511A8B190A5D2900A78522 /* main.m */,
 				74B5382D19251B7200C38121 /* AppDelegate.h */,
 				74B5382C19251B7200C38121 /* AppDelegate.m */,
@@ -220,9 +220,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74511A7B190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */ = {
+		74511A7B190A5D2900A78522 /* HelloOBP-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74511AAD190A5D2900A78522 /* Build configuration list for PBXNativeTarget "Hello-OBP-OAuth1.0a-Mac" */;
+			buildConfigurationList = 74511AAD190A5D2900A78522 /* Build configuration list for PBXNativeTarget "HelloOBP-Mac" */;
 			buildPhases = (
 				74511A78190A5D2900A78522 /* Sources */,
 				74511A79190A5D2900A78522 /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hello-OBP-OAuth1.0a-Mac";
-			productName = "Hello-OBP-OAuth1.0a-Mac";
-			productReference = 74511A7C190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac.app */;
+			name = "HelloOBP-Mac";
+			productName = "HelloOBP-Mac";
+			productReference = 74511A7C190A5D2900A78522 /* HelloOBP-Mac.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = TESOBE;
 			};
-			buildConfigurationList = 74511A77190A5D2900A78522 /* Build configuration list for PBXProject "Hello-OBP-OAuth1.0a-Mac" */;
+			buildConfigurationList = 74511A77190A5D2900A78522 /* Build configuration list for PBXProject "HelloOBP-Mac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,7 +259,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74511A7B190A5D2900A78522 /* Hello-OBP-OAuth1.0a-Mac */,
+				74511A7B190A5D2900A78522 /* HelloOBP-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -405,8 +405,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
-				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Info.plist";
+				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
+				INFOPLIST_FILE = "HelloOBP-Mac/Main/HelloOBP-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,8 +417,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Prefix.pch";
-				INFOPLIST_FILE = "Hello-OBP-OAuth1.0a-Mac/Main/Hello-OBP-OAuth1.0a-Mac-Info.plist";
+				GCC_PREFIX_HEADER = "HelloOBP-Mac/Main/HelloOBP-Mac-Prefix.pch";
+				INFOPLIST_FILE = "HelloOBP-Mac/Main/HelloOBP-Mac-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -427,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74511A77190A5D2900A78522 /* Build configuration list for PBXProject "Hello-OBP-OAuth1.0a-Mac" */ = {
+		74511A77190A5D2900A78522 /* Build configuration list for PBXProject "HelloOBP-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74511AAB190A5D2900A78522 /* Debug */,
@@ -436,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74511AAD190A5D2900A78522 /* Build configuration list for PBXNativeTarget "Hello-OBP-OAuth1.0a-Mac" */ = {
+		74511AAD190A5D2900A78522 /* Build configuration list for PBXNativeTarget "HelloOBP-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74511AAE190A5D2900A78522 /* Debug */,

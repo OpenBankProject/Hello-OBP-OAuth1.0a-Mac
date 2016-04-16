@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Hello-OBP-OAuth1.0a-Mac
+//  HelloOBP-Mac
 //
 //  Created by comp on 22.04.14.
 //  Copyright (c) 2014 TESOBE. All rights reserved.
