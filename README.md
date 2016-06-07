@@ -61,7 +61,7 @@ $ carthage update --no-build --no-use-binaries
 $ open HelloOBP-Mac-Cart.xcworkspace -a Xcode.app
 ```
 
-...or use CocoaPods...
+...and then build and run, or use CocoaPods...
 
 ```sh
 $ cd HelloOBP-Mac
@@ -82,6 +82,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 4 total
 [!] CocoaPods did not set the base configuration of your project because...
 $ open HelloOBP-Mac-Pods.xcworkspace -a Xcode.app
 ```
+...then one extra, not-yet-automated step that is needed with the latest CocoaPods (`pod --version` >= 1.0.0): in the navigator pane, click on the blue HelloOBP-Mac project icon, select HelloOBP-Mac under TARGETS, select Build Phases, clieck the 'x' to the right of the "Embed Frameworks (4 items)" build phase, as CocoaPods has installed it own "[CP] Embed Pods Frameworks" build phase further down (commiting this change now will allow you to easily revert it should you wish to try out using carthage later), and then...
 
 ...then build and run. 
 
