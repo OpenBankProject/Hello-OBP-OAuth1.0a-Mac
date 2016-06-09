@@ -33,7 +33,7 @@
 	{
 		OBPServerInfo*	serverInfo;
 		serverInfo = [OBPServerInfo addEntryForAPIServer: kDefaultServer_APIBase];
-		serverInfo.data = DefaultServerDetails();
+		serverInfo.accessData = DefaultServerDetails();
 	}
 
     // 1. Create the master View Controller

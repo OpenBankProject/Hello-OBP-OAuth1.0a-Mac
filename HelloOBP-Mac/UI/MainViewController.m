@@ -109,16 +109,16 @@
 
 	requestPath = [NSString stringWithFormat: @"banks/%@/accounts/private", OAUTH_CONSUMER_BANK_ID];
 
-	[_session.marshal getResourceAtAPIPath: requestPath
-							   withOptions: @{OBPMarshalOptionExpectClass : [NSDictionary class]}
-								forHandler:
-		^(id deserializedJSONObject, NSString* responseBody) {
-			_accountsDict = deserializedJSONObject;
+	HandleOBPMarshalData	resultHandler = 
+		^(id deserializedObject, NSString* responseBody) {
+			_accountsDict = deserializedObject;
 			dispatch_async(dispatch_get_main_queue(), ^{
 				[self loadAccounts];
 			});
-		}
-	];
+		};
+
+	[_session.marshal getResourceAtAPIPath: requestPath withOptions: nil
+						  forResultHandler: resultHandler orErrorHandler: nil];
 }
 
 - (void)loadAccounts
