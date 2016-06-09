@@ -26,6 +26,8 @@
 #define OAUTH_URL_SCHEME @"helloobp" // Your Application Name
 #define OAUTH_CONSUMER_BANK_ID @"rbs" //Account of bank
 
+#define USE_DIRECT_LOGIN 0
+
 
 
 static NSString* const kDefaultServer_APIBase = OAUTH_BASE_URL;

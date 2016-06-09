@@ -68,6 +68,7 @@
 
 -(IBAction)connect:(id)sender{
     
+	_session.authMethod = USE_DIRECT_LOGIN ? OBPAuthMethod_DirectLogin : OBPAuthMethod_OAuth1;
     [_session validate:
 		^(NSError * error) {
 			BOOL connected = error == nil && _session.valid;
