@@ -16,7 +16,7 @@
 #define kAccountsJSON @"accountsJSON"
 
 #define OAUTH_AUTHENTICATE_URL @"https://apisandbox.openbankproject.com/"
-#define OAUTH_BASE_URL @"https://apisandbox.openbankproject.com/obp/v1.2/"
+#define OAUTH_BASE_URL @"https://apisandbox.openbankproject.com/obp/v2.0.0/"
 
 // To get the values for the following fields, please register your client here:
 // https://apisandbox.openbankproject.com/consumer-registration
