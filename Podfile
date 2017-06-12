@@ -6,5 +6,5 @@ use_frameworks!
 target 'HelloOBP-Mac' do
   pod 'OAuthCore', :git => 'https://github.com/t0rst/OAuthCore.git'
   # ...t0rst fork of OAuthCore currently required by OBPKit...
-  pod 'OBPKit', :git => 'https://github.com/OpenBankProject/OBPKit-iOSX.git', :tag => '1.1.1'
+  pod 'OBPKit', :git => 'https://github.com/OpenBankProject/OBPKit-iOSX.git'
 end
